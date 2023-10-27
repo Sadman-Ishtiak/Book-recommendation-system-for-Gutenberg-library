@@ -7,7 +7,7 @@ books = []
 retrun_query = []
 
 # reading and chaching the file
-with open("pg_catalog.csv",'r',encoding='utf-8') as csvfile:
+with open("files\pg_catalog.csv",'r',encoding='utf-8') as csvfile:
     catalog = csv.DictReader(csvfile)
     for line in catalog:
             books.append(line)
@@ -19,6 +19,10 @@ def main():
     print("""1. Give a random recommendation
 2. Give a recommendation with favourite category
 """)
+
+# Random recommendation
+def rando_recommend(list):
+    return random.choice(list)
 
 # This returns a list of books that have the same name as the author the user have put in
 def author_query():

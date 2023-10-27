@@ -10,6 +10,10 @@ def count_test():
         else : noneng += 1
     print(eng, '+', noneng,'=', eng+noneng)
 
-for i in range(10):
-    a = random.choice(main.books)
-    print((a["Authors"]))
+
+a = random.choice(main.books)
+print(a)
+print(f"Book name : {a['Title']}")
+print(f"Issue Date : {a['Issued']}")
+print(f"Author's name : {a['Authors']}")
+print(f"Subjects : {a['Subjects']}")
