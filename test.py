@@ -12,8 +12,8 @@ def count_test():
 
 
 a = random.choice(main.books)
-print(a)
-print(f"Book name : {a['Title']}")
-print(f"Issue Date : {a['Issued']}")
+# print(a)
+print(f"Book name     : {a['Title']}")
+print(f"Issue Date    : {a['Issued']}")
 print(f"Author's name : {a['Authors']}")
-print(f"Subjects : {a['Subjects']}")
+print(f"Subjects      : {a['Subjects']}")
