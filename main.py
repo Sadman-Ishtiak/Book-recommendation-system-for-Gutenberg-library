@@ -15,7 +15,10 @@ with open("pg_catalog.csv",'r',encoding='utf-8') as csvfile:
 # Defining the main function so that gui code can be added later
 def main():
     print("WELCOME to a Gutenburg book recomendataion system CLI")
-    print("Enter one of the numbers ")
+    print("Enter one of the numbers which you want to use.")
+    print("""1. Give a random recommendation
+2. Give a recommendation with favourite category
+""")
 
 # This returns a list of books that have the same name as the author the user have put in
 def author_query():
