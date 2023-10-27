@@ -2,10 +2,12 @@
 import csv
 import random
 import sys
-# Global Variables 
+
+# Global Variables
 books = []
 retrun_query = []
 readed_book = []
+
 # reading and chaching the file
 with open("files\pg_catalog.csv",'r',encoding='utf-8') as csvfile:
     catalog = csv.DictReader(csvfile)
@@ -20,6 +22,7 @@ def main():
         print("Enter one of the numbers which you want to use.")
         print("1. Give a random recommendation")
         print("2. Give a recommendation with favourite category")
+        print("3. Read Own read list")
         print("0. Exit Program")
         
         flag = int(input())
@@ -56,10 +59,6 @@ def author_query():
 
 # This function is takes a string as input and returns a priority dictionary list
 def book_search():
-    ...
-
-# This function should take user's choice of book subject and types and later return a shuffled list
-def randomized_choice():
     ...
 
 # Link return for the book
