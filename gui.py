@@ -1,5 +1,6 @@
 import tkinter
 import customtkinter
+import webbrowser
 import main
 
 
@@ -9,6 +10,10 @@ def button_callback():
 
 def bookDataShow():
     ...
+
+def web_open(book):
+    url = main.link_return(book)
+    webbrowser.open(url, new=2)
 
 app = customtkinter.CTk()
 app.geometry("1920x1080")
