@@ -19,7 +19,7 @@ with open("files\my_books.csv", "r", encoding="utf-8") as meh:
 with open("files\pg_catalog.csv",'r',encoding='utf-8') as csvfile:
     catalog = csv.DictReader(csvfile)
     for line in catalog:
-        if line["Language"] == 'en' and line["Type"] == 'Text':
+        if line["Language"] == 'en' and line["Type"] == 'Text' and line not in _my_books_:
             _books_.append(line)
 
 # Defining the main function so that gui code can be added later
