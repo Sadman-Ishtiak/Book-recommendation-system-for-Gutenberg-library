@@ -59,6 +59,14 @@ def print_Book_CLI(a):
     print(f"Author's name : {a['Authors']}")
     print(f"Subjects      : {a['Subjects']}")
 
+#Filtering books on to get randomized choices
+def filter_tag(tag):
+    retrun_query = []
+    for i in _books_:
+        if tag in i["Subjects"]:
+            retrun_query.append(i)
+    return retrun_query
+
 # Random recommendation
 def rando_recommend(list):
     return random.choice(list)
@@ -94,7 +102,11 @@ def book_search(Book_library, key):
 
 # This converts Priority map to list
 def converted_to_list(priority_dictionary):
-    ...
+    ret = []
+    for i in priority_dictionary : 
+        for j in i : 
+            ret.append(j)
+    return ret
 
 # Link return for the book
 def link_return(book):
