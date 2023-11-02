@@ -98,7 +98,7 @@ def book_search(Book_library, key):
     cache_result = {}
     key = key.split()
     n = len(key)
-    for i in range(n):
+    for i in range(n+1):
         cache_result[i] = []
     
     return converted_to_list(cache_result)
