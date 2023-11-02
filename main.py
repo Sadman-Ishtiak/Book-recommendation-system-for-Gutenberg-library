@@ -96,8 +96,11 @@ def author_query():
 # This function is takes a string as input and returns a priority dictionary list
 def book_search(Book_library, key):
     cache_result = {}
-    for i in Book_library:
-        ...
+    key = key.split()
+    n = len(key)
+    for i in range(n):
+        cache_result[i] = []
+    
     return converted_to_list(cache_result)
 
 # This converts Priority map to list
