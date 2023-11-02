@@ -1,10 +1,14 @@
 from tkinter import *
+from PIL import ImageTk
 import customtkinter
 import webbrowser
 import main
 # Defining the app window 
 app = customtkinter.CTk()
 app.title("Book Recommendation System For Gutenberg Library")
+# I could not get icon to work for some reason
+# icon = ImageTk.PhotoImage(file="files\icon.png")
+# app.iconphoto(False, icon)
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
