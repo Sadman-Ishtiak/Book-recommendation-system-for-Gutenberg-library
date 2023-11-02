@@ -2,11 +2,12 @@ import tkinter
 import customtkinter
 import webbrowser
 import main
-
+# Defining the app window 
 app = customtkinter.CTk()
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
+# The working functions 
 def web_open(book):
     url = main.link_return(book)
     webbrowser.open(url, new=2)
@@ -27,11 +28,12 @@ def segmented_button_callback(value):
         
 
 segemented_button_var = customtkinter.StringVar(value=None)
-segemented_button = customtkinter.CTkSegmentedButton(app, values=["Search", "List", "Recommend"],
+segemented_button = customtkinter.CTkSegmentedButton(app, values=["Search", "List", "Recommend"], width=1000, height=30,
                                                     command=segmented_button_callback, dynamic_resizing=False,
-                                                    width=1920,height=30, variable=segemented_button_var
+                                                    corner_radius=10,
+                                                    variable=segemented_button_var
                                                     )
-segemented_button.pack()
+segemented_button.pack(padx=10,pady=10)
 
 frame_search = customtkinter.CTkFrame(app, width=1920, height=900, corner_radius=30)
 frame_list = customtkinter.CTkFrame(app, width=1920, height=900, corner_radius=30)
@@ -40,9 +42,62 @@ frame_recommend = customtkinter.CTkFrame(app, width=1920, height=900, corner_rad
 lab1 = customtkinter.CTkLabel(frame_search, text="SEARCH")
 lab2 = customtkinter.CTkLabel(frame_list, text="List")
 lab3 = customtkinter.CTkLabel(frame_recommend, text="Recommend")
-lab1.pack()
-lab2.pack()
-lab3.pack()
+lab4 = customtkinter.CTkLabel(frame_recommend, text="not Recommend")
+lab1.grid(row=1, column=1)
+lab4.grid(row=2, column=2)
+lab2.grid(row=1, column=1)
+lab3.grid(row=1, column=1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 app.after(0, lambda:app.state('zoomed')) # Don't know how this works but this put file in full screen mode
