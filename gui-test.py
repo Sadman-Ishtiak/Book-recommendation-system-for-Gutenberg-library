@@ -7,9 +7,11 @@ import main
 
 app = customtkinter.CTk()
 app.title("Book Recommendation System For Gutenberg Library")
+# app._set_appearance_mode("dark")
 
 def book_print_GUI(book):
     bookFrame = customtkinter.CTkFrame(app, width=1000)
+    # bookFrame._set_appearance_mode("dark")
     _dummy_ = customtkinter.CTkLabel(bookFrame, text="Name", anchor="w")
     _dummy_.grid(row=1, column=1)
     _dummy_ = customtkinter.CTkLabel(bookFrame, text='  :  ', anchor="w")
@@ -26,6 +28,7 @@ def book_print_GUI(book):
     
 for i in range(1,10):
     book_print_GUI(main.rando_recommend(main._books_))
+
 
 
 
