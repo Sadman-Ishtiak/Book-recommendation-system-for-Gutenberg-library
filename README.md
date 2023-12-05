@@ -1,1 +1,2 @@
 # Book-recommendation-system-for-Gutenberg-library
+"The book recommendation system for Gutenburg library" is a project for extreme level readers who has reached to a point that it is no longer quick and easy for an user to look through the book catalog of Gutenburg Library but still want to read the public domain books that are readily available in Gutenburg.
