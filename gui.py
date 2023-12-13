@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import ImageTk
 import customtkinter
 import webbrowser
-import main
+
 # Defining the app window 
 app = customtkinter.CTk()
 app.title("Book Recommendation System For Gutenberg Library")
