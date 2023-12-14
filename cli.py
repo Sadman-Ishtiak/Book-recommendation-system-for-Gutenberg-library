@@ -14,6 +14,7 @@ def main():
     print("Please select one of the options-")
     print("1. Random Recommend")
     print("2. Catagorized Random Recommend")
+    print("3. Search for a book")
     inp = input("Enter Your choice(integer) :")
     try:
         inp = int(inp)
@@ -25,6 +26,9 @@ def main():
         catagory = input("Please input a single word category: ").strip()
         newcatalog = bookfilter(_books_, catagory)
         randomBookChoice(newcatalog)
+    if inp == 3:
+        text = input("Enter to search : ").strip()
+        bookSearch(text)
         
 
 
@@ -58,6 +62,7 @@ def print_Book_CLI(a):
     print(f"Subjects      : {a['Subjects']}")
     print(x*2)
 
+# This is used for the category filtering
 def bookfilter(bookList = _books_, catagory = None):
     returncatelogue = []
     for i in bookList:
@@ -67,8 +72,28 @@ def bookfilter(bookList = _books_, catagory = None):
 
 
 
+def bookSearch(text) : 
+    answerdictionary = {}
+    text = text.split()
+    for i in range(len(text)):
+        answerdictionary[i] = []
+    for i in _books_:
+        x = 0
+        for j in text:
+            if j.lower() in i["Title"].lower():
+                x += 1
+        if x!= 0:
+            answerdictionary[len(answerdictionary) - x].append(i)
+    for i in sorted(answerdictionary.keys()):
+        for j in answerdictionary[i][:int(100/(i+1))]:
+            print(i, j["Title"].replace('\n', '\t'))
+    print(text)
 
+def authorSearch(name):
+    pass
 
+def showList(ListName):
+    pass
 
 
 
