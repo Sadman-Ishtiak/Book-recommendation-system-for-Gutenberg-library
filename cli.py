@@ -1,6 +1,6 @@
 import csv
 import random
-# import sys
+import sys
 
 # Global Variables - Static prefarably
 _books_ = []      # This is to cache the book catalog from project Gutenburg
@@ -60,6 +60,7 @@ def print_Book_CLI(a):
     print(f"Issue Date    : {a['Issued']}")
     print(f"Author's name : {a['Authors']}")
     print(f"Subjects      : {a['Subjects']}")
+    print(f"Book Link     : {'https://gutenberg.org/ebooks/'+ a['Text']}")
     print(x)
 
 # This is used for the category filtering
@@ -91,12 +92,28 @@ def bookSearch(text) :
             # print(i, j["Title"].replace('\n', '\t'))
     for i,j in enumerate(answerlist):
         print(i+1, j["Title"].replace('\n', '\t'))
+    userInput = False
     while True:
-        userInput = input("Enter the number beside the book you want to learn about : ")
+        userInput = userInput if bool(userInput) else input("Enter the number beside the book you want to learn about : ")
         try :
             print_Book_CLI(answerlist[int(userInput) - 1])
-        except :
+            print("x. Add book to read list.")
+            print("y. Add book to the wishlist.")
+            print("Enter an index to check another book.")
+            chosen_book = int(userInput)-1
+            userInput = input("Enter your choice : ")
+            if userInput.strip() == 'x' or userInput.strip() == 'X':
+                addToReadlist(answerlist[chosen_book])
+                sys.exit()
+            if userInput.strip() == 'y' or userInput.strip() == 'Y':
+                addToWishlist(answerlist[chosen_book])
+                sys.exit()
+        except ValueError:
             print("Not an integer. Please try again.")
+            userInput = False
+        except IndexError:
+            print("book not in index. Please try again")
+            userInput = False
     # print(text)
     # print(answerlist)
 
