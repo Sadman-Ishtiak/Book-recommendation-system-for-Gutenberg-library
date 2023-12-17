@@ -55,12 +55,12 @@ def randomBookChoice(listOfBooks):
 # Code to print the data of the book on the console screen 
 def print_Book_CLI(a):
     x = "\n"
-    print("\n")
+    print(x)
     print(f"Book name     : {a['Title'].replace(x, ' - ')}")
     print(f"Issue Date    : {a['Issued']}")
     print(f"Author's name : {a['Authors']}")
     print(f"Subjects      : {a['Subjects']}")
-    print(x*2)
+    print(x)
 
 # This is used for the category filtering
 def bookfilter(bookList = _books_, catagory = None):
@@ -84,10 +84,21 @@ def bookSearch(text) :
                 x += 1
         if x!= 0:
             answerdictionary[len(answerdictionary) - x].append(i)
+    answerlist = []
     for i in sorted(answerdictionary.keys()):
         for j in answerdictionary[i][:int(100/(i+1))]:
-            print(i, j["Title"].replace('\n', '\t'))
-    print(text)
+            answerlist.append(j)
+            # print(i, j["Title"].replace('\n', '\t'))
+    for i,j in enumerate(answerlist):
+        print(i+1, j["Title"].replace('\n', '\t'))
+    while True:
+        userInput = input("Enter the number beside the book you want to learn about : ")
+        try :
+            print_Book_CLI(answerlist[int(userInput) - 1])
+        except :
+            print("Not an integer. Please try again.")
+    # print(text)
+    # print(answerlist)
 
 def authorSearch(name):
     pass

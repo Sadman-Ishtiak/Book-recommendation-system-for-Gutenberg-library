@@ -9,10 +9,7 @@ app.title("Book Recommendation System For Gutenberg Library")
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
-# The working functions 
-# def web_open(book):
-#     url = main.link_return(book)
-#     webbrowser.open(url, new=2)
+
 
 def segmented_button_callback(value):
     if value == "Search":
