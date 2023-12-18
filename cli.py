@@ -15,6 +15,7 @@ def main():
     print("1. Random Recommend")
     print("2. Catagorized Random Recommend")
     print("3. Search for a book")
+    print("4. Search book of an author")
     inp = input("Enter Your choice(integer) :")
     try:
         inp = int(inp)
@@ -28,7 +29,10 @@ def main():
         randomBookChoice(newcatalog)
     if inp == 3:
         text = input("Enter to search : ").strip()
-        bookSearch(text)
+        bookSearch(text, 'Title')
+    if inp == 4:
+        text = input("Enter author name : ")
+        bookSearch(text, 'Authors')
         
 
 
@@ -73,7 +77,7 @@ def bookfilter(bookList = _books_, catagory = None):
 
 
 
-def bookSearch(text) : 
+def bookSearch(text, SearchOn = 'Text') : 
     answerdictionary = {}
     text = text.split()
     for i in range(len(text)):
@@ -81,7 +85,7 @@ def bookSearch(text) :
     for i in _books_:
         x = 0
         for j in text:
-            if j.lower() in i["Title"].lower():
+            if j.lower() in i[SearchOn].lower():
                 x += 1
         if x!= 0:
             answerdictionary[len(answerdictionary) - x].append(i)
@@ -89,9 +93,9 @@ def bookSearch(text) :
     for i in sorted(answerdictionary.keys()):
         for j in answerdictionary[i][:int(100/(i+1))]:
             answerlist.append(j)
-            # print(i, j["Title"].replace('\n', '\t'))
+            # print(i, j["Title"].replace('\n', '\t')) # For debugging purposes
     for i,j in enumerate(answerlist):
-        print(i+1, j["Title"].replace('\n', '\t'))
+        print(i+1, j['Title'].replace('\n', '\t'))
     userInput = False
     while True:
         userInput = userInput if bool(userInput) else input("Enter the number beside the book you want to learn about : ")
@@ -117,8 +121,6 @@ def bookSearch(text) :
     # print(text)
     # print(answerlist)
 
-def authorSearch(name):
-    pass
 
 def showList(ListName):
     pass
