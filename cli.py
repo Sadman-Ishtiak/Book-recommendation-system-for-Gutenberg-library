@@ -5,6 +5,7 @@ import sys
 # Global Variables - Static prefarably
 _books_ = []      # This is to cache the book catalog from project Gutenburg
 _my_books_ = []   # This is to cache the book list that user have identified to have already read
+_wishList_ = []   # This is to cache the list of books that are in the user's wishList
 _fieldnames_ = ["Text","Type","Issued","Title","Language","Authors","Subjects","LoCC","Bookshelves"]
 
 
@@ -16,6 +17,8 @@ def main():
     print("2. Catagorized Random Recommend")
     print("3. Search for a book")
     print("4. Search book of an author")
+    print("5. Print read book list.")
+    print("6. Read a book from the wishlist.")
     inp = input("Enter Your choice(integer) :")
     try:
         inp = int(inp)
@@ -33,7 +36,10 @@ def main():
     if inp == 4:
         text = input("Enter author name : ")
         bookSearch(text, 'Authors')
-        
+    if inp == 5:
+        showList(_my_books_)
+    if inp == 6:
+        showList(_wishList_)
 
 
 
@@ -123,8 +129,10 @@ def bookSearch(text, SearchOn = 'Text') :
 
 
 def showList(ListName):
-    pass
-
+    print()
+    for i, BookData in enumerate(ListName) :
+        print(f"{i+1}. {BookData['Title']}")
+    print()
 
 
 
@@ -226,6 +234,12 @@ with open("user-files\my_books.csv", "r", encoding="utf-8") as meh:
     catalog = csv.DictReader(meh)
     for i in catalog:
         _my_books_.append(i)
+
+# caching the user wishlist
+with open("user-files\wishlist.csv", "r", encoding="utf-8") as meh:
+    catalog = csv.DictReader(meh)
+    for i in catalog:
+        _wishList_.append(i)
 
 # caching the book caatalog
 with open("files\pg_catalog.csv",'r',encoding='utf-8') as csvfile:
