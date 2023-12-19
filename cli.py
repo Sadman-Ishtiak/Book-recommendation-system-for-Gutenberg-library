@@ -55,6 +55,8 @@ def main():
             userInput = input("Enter the index of a book : ")
             try:
                 print_Book_CLI(_wishList_[int(userInput) - 1])
+                userInput = input('1. Add to read list')
+                addToReadlist(_wishList_[int(userInput) - 1])
             except ValueError:
                 print("Input was not an integer.")
                 userInput = False
@@ -168,86 +170,38 @@ def showList(ListName):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # File Operation
 # Add book to the wish list file
 def addToWishlist(book):
-    with open("user-files\wishlist.csv", "a") as fp:
-        writing = csv.DictWriter(fp, fieldnames=_fieldnames_, lineterminator="\n")
-        writing.writerow(book)
+    if book in _wishList_ : pass
+    else:
+        _wishList_.append(book)
+        with open("user-files\wishlist.csv", "a") as fp:
+            writing = csv.DictWriter(fp, fieldnames=_fieldnames_, lineterminator="\n")
+            writing.writerow(book)
 
 # Add to the read file for user 
 def addToReadlist(book):
     _my_books_.append(book)
+    _books_.pop(_books_.index(book))
     try:
-        _books_.pop(_books_.index(book))
+        _wishList_.pop(_wishList_.index(book))
+        deleteFromWishList(book)
     except: ...
     with open("user-files\my_books.csv", "a") as fp:
         writing = csv.DictWriter(fp, fieldnames=_fieldnames_, lineterminator="\n")
         writing.writerow(book)
 
+# Delete book from the wishlist after user asks to put them on read list 
+def deleteFromWishList(book):
+    data = None
+    with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
+        data = csv.DictReader(filePointer)
+    print(list(data))
+    try:
+        _wishList_.pop(_wishList_.index(book))
+    except: pass
+    
 
 # Preprocessing all the required data
 # caching the user read books list
