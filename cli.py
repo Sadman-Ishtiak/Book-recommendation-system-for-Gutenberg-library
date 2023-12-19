@@ -6,8 +6,7 @@ import sys
 _books_ = []      # This is to cache the book catalog from project Gutenburg
 _my_books_ = []   # This is to cache the book list that user have identified to have already read
 _wishList_ = []   # This is to cache the list of books that are in the user's wishList
-_fieldnames_ = ["Text","Type","Issued","Title","Language","Authors","Subjects","LoCC","Bookshelves"]
-
+_fieldnames_ = ["Text","Type","Issued","Title","Language","Authors","Subjects","LoCC","Bookshelves"] 
 
 
 def main():
@@ -38,8 +37,30 @@ def main():
         bookSearch(text, 'Authors')
     if inp == 5:
         showList(_my_books_)
+        userInput = input("Do you want to know any book data(y/n): ")
+        if userInput == 'y' or userInput == 'Y':
+            while bool(userInput):
+                userInput = input('Enter the index for detail: ')
+                try: print_Book_CLI(_my_books_[int(userInput)-1])
+                except ValueError:
+                    print("Not an integer.")
+                    userInput = False
+                except IndexError:
+                    print("book not in index.")
+                    userInput = False
     if inp == 6:
         showList(_wishList_)
+        userInput = True
+        while userInput:
+            userInput = input("Enter the index of a book : ")
+            try:
+                print_Book_CLI(_wishList_[int(userInput) - 1])
+            except ValueError:
+                print("Input was not an integer.")
+                userInput = False
+            except IndexError:
+                print("Book not in index. Please try again.")
+        
 
 
 
@@ -131,7 +152,7 @@ def bookSearch(text, SearchOn = 'Text') :
 def showList(ListName):
     print()
     for i, BookData in enumerate(ListName) :
-        print(f"{i+1}. {BookData['Title']}")
+        print(i+1, BookData['Title'].replace('\n', '\t'))
     print()
 
 
