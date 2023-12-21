@@ -2,6 +2,7 @@ import csv
 import random
 import sys
 
+
 # Global Variables - Static prefarably
 _books_ = []      # This is to cache the book catalog from project Gutenburg
 _my_books_ = []   # This is to cache the book list that user have identified to have already read
@@ -64,11 +65,6 @@ def main():
             if userInput.strip() == '1':
                 addToReadlist(_wishList_[int(userInput) - 1])
                 sys.exit()
-        
-
-
-
-
 
 
 # This function is called if the user is calling one of the random choices
@@ -87,6 +83,7 @@ def randomBookChoice(listOfBooks):
         listOfBooks.remove(bookchoice)
         randomBookChoice(listOfBooks)
 
+
 # Code to print the data of the book on the console screen 
 def print_Book_CLI(a):
     x = "\n"
@@ -98,6 +95,7 @@ def print_Book_CLI(a):
     print(f"Book Link     : {'https://gutenberg.org/ebooks/'+ a['Text']}")
     print(x)
 
+
 # This is used for the category filtering
 def bookfilter(bookList = _books_, catagory = None):
     returncatelogue = []
@@ -105,7 +103,6 @@ def bookfilter(bookList = _books_, catagory = None):
         if catagory.lower() in i["Subjects"].lower():
             returncatelogue.append(i)
     return returncatelogue
-
 
 
 def bookSearch(text, SearchOn = 'Text') : 
@@ -162,19 +159,7 @@ def showList(ListName):
     print()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-# File Operation
+# File Operations
 # Add book to the wish list file
 def addToWishlist(book):
     if book in _wishList_ : pass
@@ -184,6 +169,7 @@ def addToWishlist(book):
             writing = csv.DictWriter(fp, fieldnames=_fieldnames_, lineterminator="\n")
             writing.writerow(book)
 
+
 # Add to the read file for user 
 def addToReadlist(book):
     _my_books_.append(book)
@@ -192,6 +178,7 @@ def addToReadlist(book):
     with open("user-files\my_books.csv", "a") as filePointer:
         writing = csv.DictWriter(filePointer, fieldnames=_fieldnames_, lineterminator="\n")
         writing.writerow(book)
+
 
 # Delete book from the wishlist after user asks to put them on read list 
 def deleteFromWishList(book):
@@ -210,11 +197,13 @@ with open("user-files\my_books.csv", "r", encoding="utf-8") as filePointer:
     for i in catalog:
         _my_books_.append(i)
 
+
 # caching the user wishlist
 with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
     catalog = csv.DictReader(filePointer)
     for i in catalog:
         _wishList_.append(i)
+
 
 # caching the book caatalog
 with open("files\pg_catalog.csv",'r',encoding='utf-8') as filePointer:
