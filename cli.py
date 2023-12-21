@@ -55,13 +55,15 @@ def main():
             userInput = input("Enter the index of a book : ")
             try:
                 print_Book_CLI(_wishList_[int(userInput) - 1])
-                userInput = input('1. Add to read list')
-                addToReadlist(_wishList_[int(userInput) - 1])
             except ValueError:
                 print("Input was not an integer.")
                 userInput = False
             except IndexError:
                 print("Book not in index. Please try again.")
+            userInput = input('1. Add to read list')
+            if userInput.strip() == '1':
+                addToReadlist(_wishList_[int(userInput) - 1])
+                sys.exit()
         
 
 
@@ -123,8 +125,10 @@ def bookSearch(text, SearchOn = 'Text') :
         for j in answerdictionary[i][:int(100/(i+1))]:
             answerlist.append(j)
             # print(i, j["Title"].replace('\n', '\t')) # For debugging purposes
+    print()
     for i,j in enumerate(answerlist):
         print(i+1, j['Title'].replace('\n', '\t'))
+    print()
     userInput = False
     while True:
         userInput = userInput if bool(userInput) else input("Enter the number beside the book you want to learn about : ")
@@ -183,42 +187,38 @@ def addToWishlist(book):
 # Add to the read file for user 
 def addToReadlist(book):
     _my_books_.append(book)
-    _books_.pop(_books_.index(book))
-    try:
-        _wishList_.pop(_wishList_.index(book))
-        deleteFromWishList(book)
-    except: ...
-    with open("user-files\my_books.csv", "a") as fp:
-        writing = csv.DictWriter(fp, fieldnames=_fieldnames_, lineterminator="\n")
+    _books_.remove(book)
+    if book in _wishList_: deleteFromWishList(book)
+    with open("user-files\my_books.csv", "a") as filePointer:
+        writing = csv.DictWriter(filePointer, fieldnames=_fieldnames_, lineterminator="\n")
         writing.writerow(book)
 
 # Delete book from the wishlist after user asks to put them on read list 
 def deleteFromWishList(book):
-    data = None
-    with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
-        data = csv.DictReader(filePointer)
-    print(list(data))
-    try:
-        _wishList_.pop(_wishList_.index(book))
-    except: pass
+    if book in _wishList_: _wishList_.remove(book)
+    with open("user-files\wishlist.csv", "w", encoding="utf-8", newline='') as filePointer:
+        writing = csv.DictWriter(filePointer, fieldnames=_fieldnames_)
+        writing.writeheader()
+        for i in _wishList_:
+            writing.writerow(i)
     
 
 # Preprocessing all the required data
 # caching the user read books list
-with open("user-files\my_books.csv", "r", encoding="utf-8") as meh:
-    catalog = csv.DictReader(meh)
+with open("user-files\my_books.csv", "r", encoding="utf-8") as filePointer:
+    catalog = csv.DictReader(filePointer)
     for i in catalog:
         _my_books_.append(i)
 
 # caching the user wishlist
-with open("user-files\wishlist.csv", "r", encoding="utf-8") as meh:
-    catalog = csv.DictReader(meh)
+with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
+    catalog = csv.DictReader(filePointer)
     for i in catalog:
         _wishList_.append(i)
 
 # caching the book caatalog
-with open("files\pg_catalog.csv",'r',encoding='utf-8') as csvfile:
-    catalog = csv.DictReader(csvfile)
+with open("files\pg_catalog.csv",'r',encoding='utf-8') as filePointer:
+    catalog = csv.DictReader(filePointer)
     for line in catalog:
         if line["Language"] == 'en' and line["Type"] == 'Text' and line not in _my_books_:
             _books_.append(line)
@@ -226,4 +226,5 @@ with open("files\pg_catalog.csv",'r',encoding='utf-8') as csvfile:
 
 # calling the main
 if __name__ == "__main__":
-    main()
+    try : main()
+    except EOFError: print("Exit program.")
