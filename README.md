@@ -9,3 +9,8 @@ This project is created as a Uni project by [Sadman Ishtiak](https://github.com/
 ### Command Line Interface
 ### Graphical User Interface
 ## Current Issues
+1. We used linear search to write the code faster as we still are learning. It is slow.
+2. Customtkinter is slow. It is used only because it is much easier to implement than other.
+3. Currently The Graphical User Interface is not working as it is still in the developement stage.
+4. In the CLI there are no arguments used. So, Quick arguments to get the work done is not possible
+5. The user may frequently need to use (**CTRL+Z**) to escape from the command loop to exit. The command line interface is not well made with different scenarios in mind.

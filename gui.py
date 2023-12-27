@@ -53,7 +53,8 @@ lab3.grid(row=1, column=1)
 
 # Functions for search frame 
 def searchfunction(choice):
-    print(choice)
+    print(choice)      # This prints OK So this way we can det input
+    print(sbar.get())  # This also works so we can use this as input as well
 
 # Search frame 
 sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text", width=800)
@@ -61,8 +62,8 @@ sbar.grid(row=1, column=1)
 s_option = customtkinter.CTkOptionMenu(frame_search, values=['Book Search', 'Author Search'], width=200, command=searchfunction)
 s_option.grid(row=1, column=2)
 
-#This frame should contain all the book data after it is printed on the screen
-search_scrollable_frame = customtkinter.CTkFrame(frame_search, width = 1000)
+# This frame should contain all the book data after it is printed on the screen
+search_scrollable_frame = customtkinter.CTkFrame(frame_search, width = 1000, height=550)
 search_scrollable_frame.grid(row=2, column=1, columnspan=2, pady=5)
 
 
