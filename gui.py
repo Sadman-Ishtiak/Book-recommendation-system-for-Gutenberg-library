@@ -1,7 +1,33 @@
 from tkinter import *
 from PIL import ImageTk
 import customtkinter
+import csv
 import webbrowser
+
+# Global Variables - Static prefarably
+_books_ = []      # This is to cache the book catalog from project Gutenburg
+_my_books_ = []   # This is to cache the book list that user have identified to have already read
+_wishList_ = []   # This is to cache the list of books that are in the user's wishList
+_fieldnames_ = ["Text","Type","Issued","Title","Language","Authors","Subjects","LoCC","Bookshelves"] 
+
+# Preprocessing all the required data
+# caching the user read books list
+with open("user-files\my_books.csv", "r", encoding="utf-8") as filePointer:
+    catalog = csv.DictReader(filePointer)
+    for i in catalog:
+        _my_books_.append(i)
+# caching the user wishlist
+with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
+    catalog = csv.DictReader(filePointer)
+    for i in catalog:
+        _wishList_.append(i)
+# caching the book caatalog
+with open("files\pg_catalog.csv",'r',encoding='utf-8') as filePointer:
+    catalog = csv.DictReader(filePointer)
+    for line in catalog:
+        if line["Language"] == 'en' and line["Type"] == 'Text' and line not in _my_books_:
+            _books_.append(line)
+
 
 # Defining the app window 
 app = customtkinter.CTk()
@@ -55,6 +81,27 @@ lab3.grid(row=1, column=1)
 def searchfunction(choice):
     print(choice)      # This prints OK So this way we can det input
     print(sbar.get())  # This also works so we can use this as input as well
+
+def bookSearch(text, SearchOn = 'Text') : 
+    answerdictionary = {}
+    text = text.split()
+    for i in range(len(text)):
+        answerdictionary[i] = []
+    for i in _books_:
+        x = 0
+        for j in text:
+            if j.lower() in i[SearchOn].lower():
+                x += 1
+        if x!= 0:
+            answerdictionary[len(answerdictionary) - x].append(i)
+    answerlist = []
+    for i in sorted(answerdictionary.keys()):
+        for j in answerdictionary[i][:int(100/(i+1))]:
+            answerlist.append(j)
+            # print(i, j["Title"].replace('\n', '\t')) # For debugging purposes
+    print()
+    for i,j in enumerate(answerlist):
+        print(i+1, j['Title'].replace('\n', '\t'))
 
 # Search frame 
 sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text", width=800)

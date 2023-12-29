@@ -104,7 +104,7 @@ def bookfilter(bookList = _books_, catagory = None):
             returncatelogue.append(i)
     return returncatelogue
 
-
+#This searches the book and prints and the entierety of the task of the searching Of CLI options
 def bookSearch(text, SearchOn = 'Text') : 
     answerdictionary = {}
     text = text.split()
