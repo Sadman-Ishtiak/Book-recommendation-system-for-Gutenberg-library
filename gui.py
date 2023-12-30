@@ -87,8 +87,12 @@ def bookSearch(text, SearchOn) :
     for i in sorted(answerdictionary.keys()):
         for j in answerdictionary[i][:int(100/(i+1))]:
             answerlist.append(j)
-    for i,j in enumerate(answerlist):
-        print(i+1, j['Title'].replace('\n', '\t'))
+    # for i,j in enumerate(answerlist):
+    #     print(i+1, j['Title'].replace('\n', '\t'))
+    for widget in search_scrollable_frame.winfo_children():
+        widget.destroy()
+    for i in answerlist:
+        book_print_GUI(i)
 
 # Functions for search frame 
 def searchfunction(choice):
@@ -98,6 +102,45 @@ def searchfunction(choice):
     if choice == 'Book Search' : bookSearch(text, "Title")
     if choice == 'Author Search' : bookSearch(text, "Authors")
 
+def forget_frame(frame):
+    frame.pack_forget()
+
+def book_print_GUI(book):
+    bookFrame = customtkinter.CTkFrame(search_scrollable_frame, width=1000)
+    # bookFrame._set_appearance_mode("dark")
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text="Name", anchor="w")
+    _dummy_.grid(row=1, column=1)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text='  :  ', anchor="w")
+    _dummy_.grid(row=1, column=2)
+    bookTitle = customtkinter.CTkLabel(bookFrame, text=book["Title"], width=800,wraplength=800, anchor="w")
+    bookTitle.grid(row=1, column=3, columnspan=3)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text="Authors", anchor="w")
+    _dummy_.grid(row=2, column=1)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text='  :  ', anchor="w")
+    _dummy_.grid(row=2, column=2)
+    bookAuthor = customtkinter.CTkLabel(bookFrame, text=book["Authors"], width=800, wraplength=800, anchor="w")
+    bookAuthor.grid(row=2, column=3, columnspan=3)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text="Issue Date", anchor="w")
+    _dummy_.grid(row=3, column=1)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text='  :  ', anchor="w")
+    _dummy_.grid(row=3, column=2)
+    bookIssued = customtkinter.CTkLabel(bookFrame, text=book["Issued"], anchor="w")
+    bookIssued.grid(row=3, column=3)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text="      Book type      ", anchor="w")
+    _dummy_.grid(row=4, column=1)
+    _dummy_ = customtkinter.CTkLabel(bookFrame, text='  :  ', anchor="w")
+    _dummy_.grid(row=4, column=2)
+    bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
+    bookType.grid(row=4, column=3)
+    forget_button1 = customtkinter.CTkButton(bookFrame, text=f"Forget Frame", command=lambda f=bookFrame: forget_frame(f))
+    forget_button2= customtkinter.CTkButton(bookFrame, text=f"Forget Frame", command=lambda f=bookFrame: forget_frame(f))
+    forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Forget Frame", command=lambda f=bookFrame: forget_frame(f))
+    forget_button4 = customtkinter.CTkButton(bookFrame, text=f"Forget Frame", command=lambda f=bookFrame: forget_frame(f))
+    forget_button1.grid(row=3, column=4, pady=1)
+    forget_button2.grid(row=3, column=5)
+    forget_button3.grid(row=4, column=4)
+    forget_button4.grid(row=4, column=5)
+    bookFrame.pack()
 # Search frame 
 sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text", width=800)
 sbar.grid(row=1, column=1)
@@ -105,7 +148,7 @@ s_option = customtkinter.CTkOptionMenu(frame_search, values=['Book Search', 'Aut
 s_option.grid(row=1, column=2)
 
 # This frame should contain all the book data after it is printed on the screen
-search_scrollable_frame = customtkinter.CTkFrame(frame_search, width = 1000, height=550)
+search_scrollable_frame = customtkinter.CTkScrollableFrame(frame_search, width = 1000, height=550)
 search_scrollable_frame.grid(row=2, column=1, columnspan=2, pady=5)
 
 
