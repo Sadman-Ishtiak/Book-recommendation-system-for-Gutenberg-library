@@ -25,7 +25,7 @@ with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
 with open("files\pg_catalog.csv",'r',encoding='utf-8') as filePointer:
     catalog = csv.DictReader(filePointer)
     for line in catalog:
-        if line["Language"] == 'en' and line["Type"] == 'Text' and line not in _my_books_:
+        if line["Language"] == 'en' and line not in _my_books_:
             _books_.append(line)
 
 
@@ -69,20 +69,9 @@ frame_search    = customtkinter.CTkFrame(app, width=1920, height=900, corner_rad
 frame_list      = customtkinter.CTkFrame(app, width=1920, height=900, corner_radius=30)
 frame_recommend = customtkinter.CTkFrame(app, width=1920, height=900, corner_radius=30)
 
-# Testing to see if the code works or not.
-lab2 = customtkinter.CTkLabel(frame_list, text="List")
-lab3 = customtkinter.CTkLabel(frame_recommend, text="Recommend")
-lab4 = customtkinter.CTkLabel(frame_recommend, text="not Recommend")
-lab4.grid(row=2, column=2)
-lab2.grid(row=1, column=1)
-lab3.grid(row=1, column=1)
 
-# Functions for search frame 
-def searchfunction(choice):
-    print(choice)      # This prints OK So this way we can det input
-    print(sbar.get())  # This also works so we can use this as input as well
-
-def bookSearch(text, SearchOn = 'Text') : 
+#Searches for book
+def bookSearch(text, SearchOn) :
     answerdictionary = {}
     text = text.split()
     for i in range(len(text)):
@@ -98,10 +87,16 @@ def bookSearch(text, SearchOn = 'Text') :
     for i in sorted(answerdictionary.keys()):
         for j in answerdictionary[i][:int(100/(i+1))]:
             answerlist.append(j)
-            # print(i, j["Title"].replace('\n', '\t')) # For debugging purposes
-    print()
     for i,j in enumerate(answerlist):
         print(i+1, j['Title'].replace('\n', '\t'))
+
+# Functions for search frame 
+def searchfunction(choice):
+    print(choice)      # This prints OK So this way we can det input
+    print(sbar.get())  # This also works so we can use this as input as well
+    text = sbar.get()
+    if choice == 'Book Search' : bookSearch(text, "Title")
+    if choice == 'Author Search' : bookSearch(text, "Authors")
 
 # Search frame 
 sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text", width=800)
