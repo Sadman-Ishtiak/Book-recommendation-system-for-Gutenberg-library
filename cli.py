@@ -193,21 +193,21 @@ def deleteFromWishList(book):
 
 # Preprocessing all the required data
 # caching the user read books list
-with open("user-files\my_books.csv", "r", encoding="utf-8") as filePointer:
+with open("user-files\my_books.csv", "r", encoding="ISO-8859-1") as filePointer:
     catalog = csv.DictReader(filePointer)
     for i in catalog:
         _my_books_.append(i)
 
 
 # caching the user wishlist
-with open("user-files\wishlist.csv", "r", encoding="utf-8") as filePointer:
+with open("user-files\wishlist.csv", "r", encoding="ISO-8859-1") as filePointer:
     catalog = csv.DictReader(filePointer)
     for i in catalog:
         _wishList_.append(i)
 
 
 # caching the book caatalog
-with open("files\pg_catalog.csv",'r',encoding='utf-8') as filePointer:
+with open("files\pg_catalog.csv",'r',encoding='ISO-8859-1') as filePointer:
     catalog = csv.DictReader(filePointer)
     for line in catalog:
         if line["Language"] == 'en' and line["Type"] == 'Text' and line not in _my_books_:
