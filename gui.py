@@ -217,14 +217,9 @@ def print_book_wishlist(book):
     _dummy_.grid(row=4, column=2)
     bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
     bookType.grid(row=4, column=3)
-    # forget_button = customtkinter.CTkButton(bookFrame, text=f"Hide Book from this list", command=lambda f=bookFrame: forget_frame(f))
-    # AddToWishlistutton = customtkinter.CTkButton(bookFrame, text=f"Add to Wishlist", 
-                                                #  command=lambda f=bookFrame,book=book: addToWishlist(book, f))
     forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Open Link in the web", command=lambda f=book: openBrowser(f))
     forget_button4 = customtkinter.CTkButton(bookFrame, text=f"Add To Readlist", command=lambda f=bookFrame, 
                                              book=book: addToReadlist(book, f))
-    # forget_button.grid(row=3, column=4, pady=1)
-    # AddToWishlistutton.grid(row=3, column=5)
     forget_button3.grid(row=4, column=4)
     forget_button4.grid(row=4, column=5)
     bookFrame.pack()
@@ -255,16 +250,8 @@ def print_book_readlist(book):
     _dummy_.grid(row=4, column=2)
     bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
     bookType.grid(row=4, column=3)
-    # forget_button = customtkinter.CTkButton(bookFrame, text=f"Hide Book from this list", command=lambda f=bookFrame: forget_frame(f))
-    # AddToWishlistutton = customtkinter.CTkButton(bookFrame, text=f"Add to Wishlist", 
-                                                #  command=lambda f=bookFrame,book=book: addToWishlist(book, f))
     forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Open Link in the web", command=lambda f=book: openBrowser(f))
-    # forget_button4 = customtkinter.CTkButton(bookFrame, text=f"Add To Readlist", command=lambda f=bookFrame, 
-                                            #  book=book: addToReadlist(book, f))
-    # forget_button.grid(row=3, column=4, pady=1)
-    # AddToWishlistutton.grid(row=3, column=5)
     forget_button3.grid(row=4, column=4)
-    # forget_button4.grid(row=4, column=5)
     bookFrame.pack()
 
 # This defines the function to print the list that is selected 
