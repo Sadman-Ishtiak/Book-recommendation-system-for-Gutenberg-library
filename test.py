@@ -1,7 +1,8 @@
 import customtkinter
 import random
 from tkinter import *
-import cli
+from cli import _books_
+# from main import search_scrollable_frame,forget_frame, addToReadlist, addToWishlist, openBrowser, _books_
 
 app = customtkinter.CTk()
 app.title("Top Level Window")
@@ -9,8 +10,6 @@ customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("dark-blue")
 
 def openBookDetails(book):
-    book = random.choice(cli._books_)
-    
     top = customtkinter.CTkToplevel(app)
     top.title(f"{book['Title']}")
     number = 0
@@ -21,6 +20,7 @@ def openBookDetails(book):
             "Type"    :"Book Type",
             "Subjects":"Category",
             "Issued"  :"Uploaded on gutenburg",
+            "Text"    :"Gutenburg Book ID"
             }
     for i in dcnry:
         title = customtkinter.CTkLabel(top, text=f"{dcnry[i]}", width=80)
@@ -30,13 +30,28 @@ def openBookDetails(book):
         data = customtkinter.CTkLabel(top, text=book[i], width=800, wraplength=780)
         data.grid(row=number, column=2)
         number += 1
-    
+
+
+search_scrollable_frame = customtkinter.CTkScrollableFrame(app, width = 1000, height=1000)
+search_scrollable_frame.pack()
+
+def book_print_GUI_search(book, count):
+    bookFrame = customtkinter.CTkFrame(search_scrollable_frame, width=1000)
+    btn = customtkinter.CTkLabel(bookFrame, text=count, width=100, anchor="center")
+    btn.grid(row=1, column=2)
+    bookTitle = customtkinter.CTkLabel(bookFrame, text=book["Title"].replace('\n','\t'), width=800,wraplength=800, anchor="w")
+    bookTitle.grid(row=1, column=1)
+    bookFrame.pack()
+
+
+
+
 
 # btn = customtkinter.CTkButton(app, text="Hello", command=lambda book = random.choice(cli._books_) : openBookDetails(book))
 # btn.pack()
 for i in range(1000):
-    openBookDetails(None)
-
+    count = str(i+1)
+    book_print_GUI_search(random.choice(_books_), count)
 
 
 
