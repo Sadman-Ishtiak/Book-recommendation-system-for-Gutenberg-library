@@ -31,10 +31,16 @@ with open("files\pg_catalog.csv",'r',encoding='ISO-8859-1') as filePointer:
 
 # Defining the app window 
 app = customtkinter.CTk()
-app.title("Book Recommendation System For Gutenberg Library")   # This goes to the title bar
-customtkinter.set_appearance_mode("dark")                       # 'light', 'dark', 'system'
-customtkinter.set_default_color_theme("blue")                   # Themes: "blue", "green", "dark-blue"
-# Other themes do work but the dark theme and blue appearance looks better in my opinion.
+app.title("Book Recommendation System For Gutenberg Library")     # This goes to the title bar
+customtkinter.set_appearance_mode("system")                       # 'light', 'dark', 'system'
+customtkinter.set_default_color_theme("blue")                     # Themes: "blue", "green"
+
+
+# Title of the program
+label = customtkinter.CTkLabel(app, width=1000, text="Book Recommendation System For Public Domain Books in Gutenburg Library", font=("ariel", 20))
+label.pack(pady=5)
+
+
 
 # This function is checking which main segmented_button is selected in the mainloop and
 # it is forgetting all the other except the selected frame and packing that frame in the center of the screen.
@@ -110,7 +116,7 @@ def addToWishlist(book,frame):
     if book in _wishList_ : pass
     else:
         _wishList_.append(book)
-        with open("user-files\wishlist.csv", "a") as fp:
+        with open("user-files\wishlist.csv", "a", encoding="ISO-8859-1") as fp:
             writing = csv.DictWriter(fp, fieldnames=_fieldnames_, lineterminator="\n")
             writing.writerow(book)
     forget_frame(frame)
@@ -119,9 +125,9 @@ def addToWishlist(book,frame):
 # Add to the read file for user 
 def addToReadlist(book, frame):
     _my_books_.append(book)
-    _books_.remove(book)
-    if book in _wishList_: deleteFromWishList(book)
-    with open("user-files\my_books.csv", "a") as filePointer:
+    if book in _books_ : _books_.remove(book)
+    if book in _wishList_: deleteFromWishList(book, frame)
+    with open("user-files\my_books.csv", "a", encoding="ISO-8859-1") as filePointer:
         writing = csv.DictWriter(filePointer, fieldnames=_fieldnames_, lineterminator="\n")
         writing.writerow(book)
     forget_frame(frame)
@@ -170,11 +176,11 @@ def book_print_GUI_search(book):
     _dummy_.grid(row=4, column=2)
     bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
     bookType.grid(row=4, column=3)
-    forget_button = customtkinter.CTkButton(bookFrame, text=f"Hide Book from this list", command=lambda f=bookFrame: forget_frame(f))
-    AddToWishlistutton = customtkinter.CTkButton(bookFrame, text=f"Add to Wishlist", 
+    forget_button = customtkinter.CTkButton(bookFrame, text="Hide Book from this list", command=lambda f=bookFrame: forget_frame(f))
+    AddToWishlistutton = customtkinter.CTkButton(bookFrame, text="Add to Wishlist", 
                                                  command=lambda f=bookFrame,book=book: addToWishlist(book, f))
-    forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Open Link in the web", command=lambda f=book: openBrowser(f))
-    forget_button4 = customtkinter.CTkButton(bookFrame, text=f"Add To Readlist", command=lambda f=bookFrame, 
+    forget_button3 = customtkinter.CTkButton(bookFrame, text="Open Link in the web", command=lambda f=book: openBrowser(f))
+    forget_button4 = customtkinter.CTkButton(bookFrame, text="Add To Readlist", command=lambda f=bookFrame, 
                                              book=book: addToReadlist(book, f))
     forget_button.grid(row=3, column=4, pady=1)
     AddToWishlistutton.grid(row=3, column=5)
@@ -217,8 +223,8 @@ def print_book_wishlist(book):
     _dummy_.grid(row=4, column=2)
     bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
     bookType.grid(row=4, column=3)
-    forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Open Link in the web", command=lambda f=book: openBrowser(f))
-    forget_button4 = customtkinter.CTkButton(bookFrame, text=f"Add To Readlist", command=lambda f=bookFrame, 
+    forget_button3 = customtkinter.CTkButton(bookFrame, text="Open Link in the web", command=lambda f=book: openBrowser(f))
+    forget_button4 = customtkinter.CTkButton(bookFrame, text="Add To Readlist", command=lambda f=bookFrame, 
                                              book=book: addToReadlist(book, f))
     forget_button3.grid(row=4, column=4)
     forget_button4.grid(row=4, column=5)
@@ -250,7 +256,7 @@ def print_book_readlist(book):
     _dummy_.grid(row=4, column=2)
     bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
     bookType.grid(row=4, column=3)
-    forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Open Link in the web", command=lambda f=book: openBrowser(f))
+    forget_button3 = customtkinter.CTkButton(bookFrame, text="Open Link in the web", command=lambda f=book: openBrowser(f))
     forget_button3.grid(row=4, column=4)
     bookFrame.pack()
 
@@ -338,11 +344,11 @@ def print_book_recommend(book):
     _dummy_.grid(row=4, column=2)
     bookType = customtkinter.CTkLabel(bookFrame, text=book["Type"], anchor="w")
     bookType.grid(row=4, column=3)
-    forget_button = customtkinter.CTkButton(bookFrame, text=f"Hide Book from this list", command=lambda f=bookFrame: forget_frame(f))
-    AddToWishlistutton = customtkinter.CTkButton(bookFrame, text=f"Add to Wishlist", command=lambda f=bookFrame, 
+    forget_button = customtkinter.CTkButton(bookFrame, text="Hide Book from this list", command=lambda f=bookFrame: forget_frame(f))
+    AddToWishlistutton = customtkinter.CTkButton(bookFrame, text="Add to Wishlist", command=lambda f=bookFrame, 
                                                  book=book: addToWishlist(book, f))
-    forget_button3 = customtkinter.CTkButton(bookFrame, text=f"Open Link in the web", command=lambda f=book: openBrowser(f))
-    forget_button4 = customtkinter.CTkButton(bookFrame, text=f"Add To Readlist", command=lambda f=bookFrame, 
+    forget_button3 = customtkinter.CTkButton(bookFrame, text="Open Link in the web", command=lambda f=book: openBrowser(f))
+    forget_button4 = customtkinter.CTkButton(bookFrame, text="Add To Readlist", command=lambda f=bookFrame, 
                                              book=book: addToReadlist(book, f))
     forget_button.grid(row=3, column=4, pady=1)
     AddToWishlistutton.grid(row=3, column=5)
