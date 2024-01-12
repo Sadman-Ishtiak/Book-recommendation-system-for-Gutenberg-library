@@ -24,10 +24,10 @@ def openBookDetails(book):
             }
     for i in dcnry:
         title = customtkinter.CTkLabel(top, text=f"{dcnry[i]}", width=80)
-        title.grid(row=number, column=0)
+        title.grid(row=number, column=0, padx=10)
         dash = customtkinter.CTkLabel(top, text=":", width=20)
         dash.grid(row=number, column=1)
-        data = customtkinter.CTkLabel(top, text=book[i], width=800, wraplength=780)
+        data = customtkinter.CTkLabel(top, text=book[i], width=780, wraplength=780)
         data.grid(row=number, column=2)
         number += 1
 
@@ -37,9 +37,9 @@ search_scrollable_frame.pack()
 
 def book_print_GUI_search(book, count):
     bookFrame = customtkinter.CTkFrame(search_scrollable_frame, width=1000)
-    btn = customtkinter.CTkLabel(bookFrame, text=count, width=100, anchor="center")
+    btn = customtkinter.CTkButton(bookFrame, text=count, width=100, anchor="center", command=lambda book = book : openBookDetails(book))
     btn.grid(row=1, column=2)
-    bookTitle = customtkinter.CTkLabel(bookFrame, text=book["Title"].replace('\n','\t'), width=800,wraplength=800, anchor="w")
+    bookTitle = customtkinter.CTkLabel(bookFrame, text=book["Title"].replace('\n',' - '), width=800,wraplength=800, anchor="w")
     bookTitle.grid(row=1, column=1)
     bookFrame.pack()
 
@@ -49,7 +49,7 @@ def book_print_GUI_search(book, count):
 
 # btn = customtkinter.CTkButton(app, text="Hello", command=lambda book = random.choice(cli._books_) : openBookDetails(book))
 # btn.pack()
-for i in range(1000):
+for i in range(500):
     count = str(i+1)
     book_print_GUI_search(random.choice(_books_), count)
 
@@ -59,5 +59,5 @@ for i in range(1000):
 
 
 
-app.after(0, lambda:app.state('zoomed'))
+# app.after(0, lambda:app.state('zoomed'))
 app.mainloop()

@@ -1,6 +1,4 @@
 Text,Type,Issued,Title,Language,Authors,Subjects,LoCC,Bookshelves
-3399,Text,8/1/2002,Complete Project Gutenberg William Dean Howells Literature Essays,en,"Howells, William Dean, 1837-1920","Literature -- History and criticism; American literature -- 19th century -- History and criticism; Authors, American -- 19th century -- Biography",PS,
-3400,Text,8/1/2002,Complete Project Gutenberg William Dean Howells Works,en,"Howells, William Dean, 1837-1920",Literature -- History and criticism; American literature -- 19th century,PS,
 3483,Text,10/1/2002,Widger's Quotations from the Project Gutenberg Editions of the Works of William Dean Howells,en,"Howells, William Dean, 1837-1920; Widger, David, 1932-2021? [Editor]",Quotations,PS,Project Gutenberg
 7546,Text,8/27/2004,Quotes and Images From The Works of William Dean Howells,en,"Howells, William Dean, 1837-1920; Widger, David, 1932-2021? [Editor]",Quotations,PS,
 12791,Text,6/30/2004,Wells Brothers: The Young Cattle Kings,en,"Adams, Andy, 1859-1935",Historical fiction; Western stories; Ranch life -- Fiction,PS,Western
@@ -10,7 +8,6 @@ Stories and Readings Selected From The Works of William Dean Howells",en,"Howell
 30882,Text,1/7/2010,God and Mr. Wells: A Critical Examination of 'God the Invisible King',en,"Archer, William, 1856-1924","Wells, H. G. (Herbert George), 1866-1946. God the invisible king",BT,
 108,Text,3/8/2006,The Return of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Detective and mystery stories, English",PR,Detective Fiction
 221,Text,2/1/1995,The Return of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,Detective Fiction
-834,Text,3/1/1997,The Memoirs of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,Detective Fiction
 1661,Text,3/1/1999,The Adventures of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,Detective Fiction; Contemporary Reviews; Banned Books from Anne Haight's list
 2350,Text,10/1/2000,His Last Bow: An Epilogue of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories",PR,Detective Fiction
 8624,Sound,8/1/2005,The Adventures of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,
@@ -20,14 +17,14 @@ Stories and Readings Selected From The Works of William Dean Howells",en,"Howell
 932,Text,6/1/1997,The Fall of the House of Usher,en,"Poe, Edgar Allan, 1809-1849",Short stories; Horror tales; Gothic fiction,PS,Movie Books
 2196,Text,3/26/2006,An Iceland Fisherman,en,"Loti, Pierre, 1850-1923; Cambon, Jules, 1845-1935 [Translator]",Fishers -- Fiction; Iceland -- Fiction,PQ,
 1139,Text,12/1/1997,Fisherman's Luck and Some Other Uncertain Things,en,"Van Dyke, Henry, 1852-1933",Fishing,PS,
-2616,Text,6/1/2004,Memoirs of General William T. Sherman — Volume 1,en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
-2617,Text,6/1/2004,Memoirs of General William T. Sherman — Volume 2,en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
-2651,Text,3/27/2005,"Personal Memoirs of P. H. Sheridan, General, United States Army — Volume 1",en,"Sheridan, Philip Henry, 1831-1888","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography; Sheridan, Philip Henry, 1831-1888; Indians of North America -- Wars -- 1866-1895",E456,US Civil War
-2652,Text,6/1/2004,"Personal Memoirs of P. H. Sheridan, General, United States Army — Volume 2",en,"Sheridan, Philip Henry, 1831-1888","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography; Sheridan, Philip Henry, 1831-1888; Indians of North America -- Wars -- 1866-1895",E456,US Civil War
+2616,Text,6/1/2004,Memoirs of General William T. Sherman ï¿½ Volume 1,en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
+2617,Text,6/1/2004,Memoirs of General William T. Sherman ï¿½ Volume 2,en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
+2651,Text,3/27/2005,"Personal Memoirs of P. H. Sheridan, General, United States Army ï¿½ Volume 1",en,"Sheridan, Philip Henry, 1831-1888","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography; Sheridan, Philip Henry, 1831-1888; Indians of North America -- Wars -- 1866-1895",E456,US Civil War
+2652,Text,6/1/2004,"Personal Memoirs of P. H. Sheridan, General, United States Army ï¿½ Volume 2",en,"Sheridan, Philip Henry, 1831-1888","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography; Sheridan, Philip Henry, 1831-1888; Indians of North America -- Wars -- 1866-1895",E456,US Civil War
 2691,Text,7/1/2001,"Nan Sherwood at Pine Camp; Or, The Old Lumberman's Secret",en,"Carr, Annie Roe",Detective and mystery stories; Michigan -- Juvenile fiction,PZ,Children's Book Series
 3784,Text,2/1/2003,The Sheridan Road Mystery,en,"Thorne, Mabel; Thorne, Paul","Detective and mystery stories, American",PS,
-4361,Text,6/1/2004,Memoirs of General William T. Sherman — Complete,en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
-4362,Text,6/1/2004,"Personal Memoirs of P. H. Sheridan, General, United States Army — Complete",en,"Sheridan, Philip Henry, 1831-1888","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography; Sheridan, Philip Henry, 1831-1888; Indians of North America -- Wars -- 1866-1895",E456,US Civil War
+4361,Text,6/1/2004,Memoirs of General William T. Sherman ï¿½ Complete,en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
+4362,Text,6/1/2004,"Personal Memoirs of P. H. Sheridan, General, United States Army ï¿½ Complete",en,"Sheridan, Philip Henry, 1831-1888","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography; Sheridan, Philip Henry, 1831-1888; Indians of North America -- Wars -- 1866-1895",E456,US Civil War
 4959,Text,1/1/2004,The Life and Adventures of Maj. Roger Sherman Potter,en,"Adams, F. Colburn (Francis Colburn), 1850-1891",Political fiction,PS,
 5850,Text,6/1/2004,"Memoirs of General W. T. Sherman, Volume I., Part 1",en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
 5852,Text,6/1/2004,"Memoirs of General W. T. Sherman, Volume II., Part 3",en,"Sherman, William T. (William Tecumseh), 1820-1891","Generals -- United States -- Biography; United States -- History -- Civil War, 1861-1865 -- Campaigns; Sherman, William T. (William Tecumseh), 1820-1891; United States -- History -- Civil War, 1861-1865 -- Personal narratives; United States. Army -- Biography",E456,US Civil War
@@ -39,8 +36,8 @@ Stories and Readings Selected From The Works of William Dean Howells",en,"Howell
 5993,Text,6/1/2004,Walter Sherwood's Probation,en,"Alger, Horatio, Jr., 1832-1899",Orphans -- Juvenile fiction; Coming of age -- Juvenile fiction; Wealth -- Juvenile fiction; Self-reliance -- Juvenile fiction; West (U.S.) -- History -- 19th century -- Juvenile fiction,PZ,Children's Fiction
 6439,Text,9/1/2004,"Nan Sherwood at Rose Ranch; Or, The Old Mexican's Treasure",en,"Carr, Annie Roe",Schools -- Juvenile fiction; Ranch life -- Juvenile fiction,PZ,Children's Book Series
 6557,Sound,9/1/2004,The Fall of the House of Usher,en,"Poe, Edgar Allan, 1809-1849",Horror tales,PS,
-6741,Text,10/1/2004,Memoirs of the Life of the Rt. Hon. Richard Brinsley Sheridan — Volume 01,en,"Moore, Thomas, 1779-1852","Great Britain -- Politics and government -- 1760-1820; Sheridan, Richard Brinsley, 1751-1816; Dramatists, English -- 18th century -- Biography; Theatrical managers -- Great Britain -- Biography; Legislators -- Great Britain -- Biography",PR,
-7775,Text,3/1/2005,Memoirs of the Life of the Rt. Hon. Richard Brinsley Sheridan — Volume 02,en,"Moore, Thomas, 1779-1852","Great Britain -- Politics and government -- 1760-1820; Sheridan, Richard Brinsley, 1751-1816; Dramatists, English -- 18th century -- Biography; Theatrical managers -- Great Britain -- Biography; Legislators -- Great Britain -- Biography",PR,
+6741,Text,10/1/2004,Memoirs of the Life of the Rt. Hon. Richard Brinsley Sheridan ï¿½ Volume 01,en,"Moore, Thomas, 1779-1852","Great Britain -- Politics and government -- 1760-1820; Sheridan, Richard Brinsley, 1751-1816; Dramatists, English -- 18th century -- Biography; Theatrical managers -- Great Britain -- Biography; Legislators -- Great Britain -- Biography",PR,
+7775,Text,3/1/2005,Memoirs of the Life of the Rt. Hon. Richard Brinsley Sheridan ï¿½ Volume 02,en,"Moore, Thomas, 1779-1852","Great Britain -- Politics and government -- 1760-1820; Sheridan, Richard Brinsley, 1751-1816; Dramatists, English -- 18th century -- Biography; Theatrical managers -- Great Britain -- Biography; Legislators -- Great Britain -- Biography",PR,
 9551,Sound,12/1/2005,The Adventures of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,Contemporary Reviews; Detective Fiction
 9553,Sound,12/1/2005,The Return of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,Detective Fiction
 9555,Sound,12/1/2005,The Memoirs of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,Detective Fiction
@@ -49,82 +46,3 @@ Memoir and Correspondence of John Murray; with an Account of the Origin and Prog
 12350,Text,5/1/2004,"The International Jewish Cook Book
 1600 Recipes According to the Jewish Dietary Laws with the Rules for Kashering;
 the Favorite Recipes of America, Austria, Germany, Russia, France, Poland, Roumania, Etc., Etc.",en,"Greenbaum, Florence Kreisler",Jewish cooking,TX,Judaism; Cookbooks and Cooking
-12610,Text,6/1/2004,"Nan Sherwood's Winter Holidays; Or, Rescuing the Runaways",en,"Carr, Annie Roe",Vacations -- Juvenile fiction,PZ,Children's Book Series; Christmas
-15077,Text,2/16/2005,The Tale of Mr. Jeremy Fisher,en,"Potter, Beatrix, 1866-1943",Frogs -- Juvenile fiction,PZ,Children's Picture Books
-16097,Text,7/13/2005,"The Pursuit of the House-Boat
-Being Some Further Account of the Divers Doings of the Associated Shades, under the Leadership of Sherlock Holmes, Esq.",en,"Bangs, John Kendrick, 1862-1922; Newell, Peter, 1862-1924 [Illustrator]","Holmes, Sherlock (Fictitious character) -- Fiction; Fantasy fiction; Doyle, Arthur Conan, 1859-1930 -- Parodies, imitations, etc.",PS,"Bestsellers, American, 1895-1923"
-17039,Text,11/10/2005,The Salmon Fishery of Penobscot Bay and River in 1895-96,en,"Smith, Hugh M. (Hugh McCormick), 1865-1941",Atlantic salmon fisheries -- Maine,SH,
-17043,Text,11/11/2005,The Sheriff's Son,en,"Raine, William MacLeod, 1871-1954; Cue, Harold James, 1887-1961 [Illustrator]",Western stories,PS,
-17171,Text,11/28/2005,New England Salmon Hatcheries and Salmon Fisheries in the Late 19th Century,en,Various,Salmon -- New England; Fish hatcheries -- New England; Fisheries -- New England,SH,
-17475,Text,1/7/2006,"The Lobster Fishery of Maine
-Bulletin of the United States Fish Commission, Vol. 19, Pages 241-265, 1899",en,"Cobb, John N. (John Nathan), 1868-1930",Lobster fisheries -- Maine,SH,
-18175,Text,4/14/2006,"Yorksher Puddin'
-A Collection of the Most Popular Dialect Stories from the Pen of John Hartley",en,"Hartley, John, 1839-1915",English language -- Dialects -- England -- Yorkshire; Yorkshire (England) -- Fiction,PR,
-19388,Text,9/26/2006,The Sagebrusher: A Story of the West,en,"Hough, Emerson, 1857-1923",Western stories,PS,
-20527,Text,2/6/2007,"The Sherwood Foresters in the Great War 1914 - 1919
-History of the 1/8th Battalion",en,"Weetman, W. C. C.","World War, 1914-1918 -- Campaigns -- Western Front; World War, 1914-1918 -- Regimental histories -- Great Britain; Great Britain. Army. Sherwood Foresters (Nottinghamshire and Derbyshire Regiment)",D501,World War I
-21008,Text,4/8/2007,The Boy With the U. S. Fisheries,en,"Rolt-Wheeler, Francis, 1876-1960",Adventure and adventurers -- Juvenile fiction; United States. Bureau of Commercial Fisheries -- Juvenile fiction,PZ,Children's Book Series
-22351,Text,8/17/2007,Publisher's Advertising (1872),en,Harper & Brothers [Editor],Advertising -- Books,PN,
-22664,Text,9/18/2007,"The Severed Hand
-From ""German Tales"" Published by the American Publishers' Corporation",en,"Hauff, Wilhelm, 1802-1827",Fiction; Short stories,PT,
-22665,Text,9/18/2007,"Christian Gellert's Last Christmas
-From ""German Tales"" Published by the American Publishers' Corporation",en,"Auerbach, Berthold, 1812-1882","Christmas stories; Gellert, Christian Fürchtegott, 1715-1769",PT,Christmas
-22841,Text,10/2/2007,"Mr. Joseph Hanson, The Haberdasher",en,"Mitford, Mary Russell, 1787-1855",Short stories; City and town life -- Fiction,PR,
-23008,Text,10/12/2007,The Sheriff and His Partner,en,"Harris, Frank, 1856-1931",Fiction; Short stories,PR,
-23041,Text,10/26/2007,"The Works of William Shakespeare [Cambridge Edition] [Vol. 1 of 9]
-Introduction and Publisher's Advertising",en,"Shakespeare, William, 1564-1616; Clark, William George, 1821-1878 [Editor]; Glover, John, librarian of Trinity College, Cambridge [Editor]",English drama,PR,
-23188,Text,10/25/2007,"Michael Penguyne; Or, Fisher Life on the Cornish Coast",en,"Kingston, William Henry Giles, 1814-1880",Christian life -- Juvenile fiction; Orphans -- Juvenile fiction; Adopted children -- Juvenile fiction; Fishers -- Juvenile fiction; Courtship -- Juvenile fiction,PZ,
-23510,Text,11/16/2007,"The Sheriffs Bluff
-1908",en,"Page, Thomas Nelson, 1853-1922",Short stories; Southern States -- Social life and customs -- Fiction,PS,
-24639,Text,2/18/2008,"The Colonial Mortuary Bard; ""'Reo,"" The Fisherman; and The Black Bream of Australia
-1901",en,"Becke, Louis, 1855-1913","Short stories; Sea stories; Adventure stories, Australian; Pacific Area -- Social life and customs -- Fiction",PR,Australia
-24683,Text,2/25/2008,"Nan Sherwood at Palm Beach; Or, Strange Adventures Among The Orange Groves",en,"Carr, Annie Roe",Detective and mystery stories; Friendship -- Juvenile fiction; Voyages and travels -- Juvenile fiction; Girls -- Juvenile fiction; Florida -- Fiction,PZ,Children's Book Series
-24952,Text,3/29/2008,"Âmona; The Child; And The Beast; And Others
-From ""The Strange Adventure of James Shervinton, and Other Stories"" - 1902",en,"Becke, Louis, 1855-1913",Short stories; Oceania -- Fiction,PR,
-24953,Text,3/29/2008,"The Flemmings and ""Flash Harry"" of Savait
-From ""The Strange Adventure of James Shervinton, and Other Stories"" - 1902",en,"Becke, Louis, 1855-1913",Oceania -- Fiction,PR,
-24954,Text,3/29/2008,"""Pig-Headed"" Sailor Men
-From ""The Strange Adventure of James Shervinton, and Other Stories"" - 1902",en,"Becke, Louis, 1855-1913",Short stories; Oceania -- Fiction,PR,
-24998,Text,4/5/2008,"Concerning ""Bully"" Hayes
-From ""The Strange Adventure of James Shervinton, and Other Stories"" - 1902",en,"Becke, Louis, 1855-1913","Sea stories; Adventure stories, Australian; Pacific Area -- Social life and customs -- Fiction",PR,
-24999,Text,4/5/2008,"The Strange Adventure of James Shervinton
-1902",en,"Becke, Louis, 1855-1913","Sea stories; Adventure stories, Australian; Pacific Area -- Social life and customs -- Fiction",PR,
-26560,Text,9/8/2008,"Jim Spurling, Fisherman
-or Making Good",en,"Tolman, Albert Walter, 1866-",Maine -- Juvenile fiction; Fisheries -- Juvenile fiction,PZ,
-28733,Sound,5/1/2009,The Adventures of Sherlock Holmes,en,"Doyle, Arthur Conan, 1859-1930","Holmes, Sherlock (Fictitious character) -- Fiction; Private investigators -- England -- Fiction; Detective and mystery stories, English",PR,
-30024,Text,9/18/2009,The Fisher-Boy Urashima,en,"Eitaku, 1843-1890 [Illustrator]; Chamberlain, Basil Hall, 1850-1935 [Translator]",Fairy tales; Folklore -- Japan,PZ,
-32085,Text,4/22/2010,Christine: A Fife Fisher Girl,en,"Barr, Amelia E., 1831-1919; Mulford, Stockton, 1886-1960 [Illustrator]",Young women -- Fiction; Fishers -- Fiction; Fife (Scotland) -- Fiction,PS,
-32595,Text,5/30/2010,"A Woman's Wartime Journal
-An account of the passage over a Georgia plantation of Sherman's army on the march to the sea, as recorded in the diary of Dolly Sumner Lunt",en,"Street, Julian, 1879-1947 [Annotator]; Lunt, Dolly Sumner, 1817-1891","United States -- History -- Civil War, 1861-1865 -- Personal narratives, Confederate; Georgia -- History -- Civil War, 1861-1865 -- Personal narratives; Lunt, Dolly Sumner, 1817-1891; Sherman's March to the Sea -- Personal narratives; Georgia -- Biography",E456,US Civil War
-33206,Text,7/20/2010,Plashers Mead: A Novel,en,"MacKenzie, Compton, 1883-1972; Dewey, Alfred James, 1874-1958 [Illustrator]",Sisters -- Fiction; Man-woman relationships -- Fiction; England -- Social life and customs -- Fiction; Poets -- Fiction,PR,
-34281,Text,11/11/2010,The Sheriff of Badger: A Tale of the Southwest Borderland,en,"Pattullo, George, 1879-1967",Western stories; Sheriffs -- Fiction,PS,
-34849,Text,1/4/2011,"The Rival Crusoes; Or, The Ship Wreck
-Also A Voyage to Norway; and The Fisherman's Cottage.",en,"Strickland, Agnes, 1796-1874",Fiction; Children's stories,PR; PZ,
-35335,Text,2/24/2011,The Sherrods,en,"McCutcheon, George Barr, 1866-1928; Williams, C. D. (Charles D.), 1875-1954 [Illustrator]",Bigamy -- Fiction,PS,
-35780,Text,4/6/2011,"Two Fishers, and Other Poems",en,"Palmer, Herbert E. (Herbert Edward), 1880-1961","World War, 1914-1918 -- Poetry; English poetry",PR,
-36176,Text,5/20/2011,Nan Sherwood's Summer Holidays,en,"Carr, Annie Roe",Vacations -- Juvenile fiction; Voyages and travels -- Juvenile fiction; Schoolgirls -- Juvenile fiction; Americans -- Great Britain -- Juvenile fiction,PZ,
-36202,Text,5/24/2011,Nan Sherwood on the Mexican Border,en,"Carr, Annie Roe",Vacations -- Juvenile fiction; Adventure and adventurers -- Juvenile fiction; Voyages and travels -- Juvenile fiction; Girls -- Juvenile fiction; Smugglers -- Juvenile fiction; Mexico -- Description and travel -- Juvenile fiction,PZ,
-37725,Text,10/11/2011,The Fisher Girl,en,"Bjørnson, Bjørnstjerne, 1832-1910; Hjerleid, Elizabeth [Translator]; Hjerleid, Sivert [Translator]",Young women -- Fiction; Bildungsromans; Norway -- Fiction,PT,
-39130,Text,3/13/2012,Dr. Grenfell's Parish: The Deep Sea Fisherman,en,"Duncan, Norman, 1871-1916","Labrador (N.L.) -- Description and travel; Newfoundland and Labrador -- Description and travel; Grenfell, Wilfred Thomason, Sir, 1865-1940; Royal National Mission to Deep Sea Fishermen",F1001,
-40151,Text,7/7/2012,Constance Sherwood: An Autobiography of the Sixteenth Century,en,"Fullerton, Georgiana, 1812-1885","Great Britain -- History -- Elizabeth, 1558-1603 -- Fiction",PR,
-42568,Text,4/20/2013,"The Cornish Fishermen's Watch-Night, and Other Stories",en,Anonymous,"Christian life -- Fiction; Conduct of life -- Fiction; Short stories, English",PR,
-42575,Text,4/21/2013,Washer the Raccoon,en,"Walsh, George Ethelbert, 1865-1941; Prittie, Edwin John [Illustrator]",Animals -- Juvenile fiction; Raccoon -- Juvenile fiction,PZ,
-43395,Text,8/3/2013,The Washer of the Ford: Legendary moralities and barbaric tales,en,"Sharp, William, 1855-1905","Scotland -- Social life and customs -- Fiction; Mythology, Celtic -- Fiction",PR,
-44296,Text,11/27/2013,"Twenty Years in Europe
-A Consul-General's Memories of Noted People, with Letters From General W. T. Sherman",en,"Byers, S. H. M. (Samuel Hawkins Marshall), 1838-1933",Europe -- Description and travel,D,
-44686,Text,1/17/2014,"Life of Wm. Tecumseh Sherman.
-Late Retired General. U. S. A.",en,"Johnson, Willis Fletcher, 1857-1931; Howard, O. O. (Oliver Otis), 1830-1909 [Author of introduction, etc.]","Sherman, William T. (William Tecumseh), 1820-1891",E456,
-45024,Text,2/26/2014,A Boy Trooper with Sheridan,en,"Allen, Stanton P., 1849-1901","United States -- History -- Civil War, 1861-1865",E456,
-45341,Text,4/7/2014,Wager of Battle: A Tale of Saxon Slavery in Sherwood Forest,en,"Herbert, Henry William, 1807-1858","Sherwood Forest (England) -- Fiction; Anglo-Saxons -- Fiction; Great Britain -- History -- Norman period, 1066-1154 -- Fiction",PS,
-45536,Text,4/30/2014,Little Fishers: and Their Nets,en,"Pansy, 1841-1930",Christian life -- Juvenile fiction; Conduct of life -- Juvenile fiction; Girls -- Conduct of life -- Juvenile fiction; Temperance -- Juvenile fiction; Families -- Juvenile fiction; Conversion -- Juvenile fiction,PZ,
-35248,Text,2/12/2011,"Nan Sherwood at Lakeview Hall; Or, The Mystery of the Haunted Boathouse",en,"Carr, Annie Roe",Schools -- Juvenile fiction; Friendship -- Juvenile fiction; Girls -- Juvenile fiction; Students -- Juvenile fiction,PZ,
-46347,Text,7/21/2014,"Men of Our Times; Or, Leading Patriots of the Day
-Being narratives of the lives and deeds of statesmen, generals, and orators. Including biographical sketches and anecdotes of Lincoln, Grant, Garrison, Sumner, Chase, Wilson, Greeley, Farragut, Andrew, Colfax, Stanton, Douglass, Buckingham, Sherman, Sheridan, Howard, Phillips and Beecher.",en,"Stowe, Harriet Beecher, 1811-1896","United States -- History -- Civil War, 1861-1865 -- Biography; United States -- Biography",E456,US Civil War
-48796,Text,4/26/2015,"Index Expurgatorius Anglicanus
-Or, a descriptive catalogue of the principal books printed or published in England, which have been suppressed, or burnt by the common hangman, or censured, or for which the authors, printers, or publishers have been prosecuted",en,"Hart, W. H. (William Henry), -1888",Prohibited books -- England -- Bibliography,Z,
-51131,Text,2/5/2016,"A voyage to Spitzbergen
-containing an account of that country, of the zoology of the North; of the Shetland Islands; and of the whale fishery",en,"Laing, John (Surgeon)",Whaling; Svalbard (Norway) -- Description and travel; Animals -- Arctic regions; Shetland (Scotland) -- Description and travel,G,
-51767,Text,4/15/2016,Death's Wisher,en,"Wannamaker, Jim; Francis, Dick [Illustrator]",Science fiction; Parapsychology -- Fiction; Psychic ability -- Fiction; Physicists -- Fiction,PS,Science Fiction
-51999,Text,5/5/2016,Life and Military Career of Major-General William Tecumseh Sherman,en,"Headley, P. C. (Phineas Camp), 1819-1903","Sherman, William T. (William Tecumseh), 1820-1891",E456,
-49614,Text,8/5/2015,"The Collected Works in Verse and Prose of William Butler Yeats, Vol. 7 (of 8)
-The Secret Rose. Rosa Alchemica. The Tables of the Law. The Adoration of the Magi. John Sherman and Dhoya",en,"Yeats, W. B. (William Butler), 1865-1939",English literature -- Irish authors,PR,

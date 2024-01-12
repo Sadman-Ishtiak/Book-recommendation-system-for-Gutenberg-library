@@ -10,6 +10,13 @@ _my_books_ = []   # This is to cache the book list that user have identified to 
 _wishList_ = []   # This is to cache the list of books that are in the user's wishList
 _fieldnames_ = ["Text","Type","Issued","Title","Language","Authors","Subjects","LoCC","Bookshelves"] 
 
+# Defining the app window 
+app = customtkinter.CTk()
+app.title("Book Recommendation System For Gutenberg Library")     # This goes to the title bar
+customtkinter.set_appearance_mode("system")                       # 'light', 'dark', 'system'
+customtkinter.set_default_color_theme("blue")                     # Themes: "blue", "green"
+
+
 # Preprocessing all the required data
 # caching the user read books list
 with open("user-files\my_books.csv", "r", encoding="ISO-8859-1") as filePointer:
@@ -29,17 +36,9 @@ with open("files\pg_catalog.csv",'r',encoding='ISO-8859-1') as filePointer:
             _books_.append(line)
 
 
-# Defining the app window 
-app = customtkinter.CTk()
-app.title("Book Recommendation System For Gutenberg Library")     # This goes to the title bar
-customtkinter.set_appearance_mode("system")                       # 'light', 'dark', 'system'
-customtkinter.set_default_color_theme("blue")                     # Themes: "blue", "green"
-
-
 # Title of the program
-label = customtkinter.CTkLabel(app, width=1000, text="Book Recommendation System For Public Domain Books in Gutenburg Library", font=("ariel", 20))
-label.pack(pady=5)
-
+TitleLabel = customtkinter.CTkLabel(app, width=1000, text="Book Recommendation System For Public Domain Books in Gutenburg Library", font=("ariel", 20))
+TitleLabel.pack(pady=5)
 
 
 # This function is checking which main segmented_button is selected in the mainloop and
@@ -187,15 +186,27 @@ def book_print_GUI_search(book):
     forget_button3.grid(row=4, column=4)
     forget_button4.grid(row=4, column=5)
     bookFrame.pack(pady=1)
+
+# Opens a google link of the search bar 
+def google_link_opener():
+    link ="https://google.com/search?q=" +  sbar.get().replace(" ", "+")
+    webbrowser.open(link)
+
 # Search frame 
-sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text to search", width=810)
+sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text to search", width=780)
 sbar.grid(row=1, column=1)
+
+image_path = "files/google.png"  # Replace with the actual path to your image file
+image = PhotoImage(file=image_path)
+image_button = Button(frame_search, image=image, command=google_link_opener)
+image_button.grid(row=1, column=3)
+
 s_option = customtkinter.CTkOptionMenu(frame_search, values=['Book Search', 'Author Search'], width=210, command=searchfunction)
 s_option.grid(row=1, column=2)
 
 # This frame should contain all the book data after it is printed on the screen
-search_scrollable_frame = customtkinter.CTkScrollableFrame(frame_search, width = 1000, height=550)
-search_scrollable_frame.grid(row=2, column=1, columnspan=2, pady=5)
+search_scrollable_frame = customtkinter.CTkScrollableFrame(frame_search, width = 1000, height=900)
+search_scrollable_frame.grid(row=2, column=1, columnspan=3, pady=5)
 
 def print_book_wishlist(book):
     bookFrame = customtkinter.CTkFrame(list_scrollable_frame, width=1000)
@@ -258,7 +269,7 @@ def print_book_readlist(book):
     bookType.grid(row=4, column=3)
     forget_button3 = customtkinter.CTkButton(bookFrame, text="Open Link in the web", command=lambda f=book: openBrowser(f))
     forget_button3.grid(row=4, column=4)
-    bookFrame.pack()
+    bookFrame.pack(pady=1)
 
 # This defines the function to print the list that is selected 
 def show_list_button(value):
@@ -281,7 +292,7 @@ show_list_segment_btn = customtkinter.CTkSegmentedButton(frame_list, values=["Wi
                                                     )
 show_list_segment_btn.pack()
 
-list_scrollable_frame = customtkinter.CTkScrollableFrame(frame_list, width=1000, height=600)
+list_scrollable_frame = customtkinter.CTkScrollableFrame(frame_list, width=1000, height=900)
 list_scrollable_frame.pack()
 
 
@@ -362,7 +373,7 @@ optns = ["Random Recommend", "Categorized Random Recommend"]
 random_recommend_segmented = customtkinter.CTkSegmentedButton(frame_recommend, values=optns, height=30, width=1020,
                                                               dynamic_resizing=False, command=recommend_type)
 random_recommend_segmented.pack()
-random_scrollable_frame = customtkinter.CTkScrollableFrame(frame_recommend, width=1000, height=550)
+random_scrollable_frame = customtkinter.CTkScrollableFrame(frame_recommend, width=1000, height=900)
 random_scrollable_frame.pack()
 
 
