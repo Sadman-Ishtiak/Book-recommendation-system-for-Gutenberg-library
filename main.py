@@ -202,10 +202,10 @@ sbar.grid(row=1, column=1)
 image_path = "files/google.png"  # Replace with the actual path to your image file
 image = PhotoImage(file=image_path)
 image_button = Button(frame_search, image=image, command=google_link_opener)
-image_button.grid(row=1, column=3)
+image_button.grid(row=1, column=2)
 
 s_option = customtkinter.CTkOptionMenu(frame_search, values=['Book Search', 'Author Search'], width=210, command=searchfunction)
-s_option.grid(row=1, column=2)
+s_option.grid(row=1, column=3)
 
 # This frame should contain all the book data after it is printed on the screen
 search_scrollable_frame = customtkinter.CTkScrollableFrame(frame_search, width = 1000, height=900)
