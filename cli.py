@@ -183,12 +183,13 @@ def addToReadlist(book):
 # Delete book from the wishlist after user asks to put them on read list 
 # Basically rewrites the entire wislist.csv to remove the book from the file
 def deleteFromWishList(book):
-    if book in _wishList_: _wishList_.remove(book)
-    with open("user-files\wishlist.csv", "w", encoding="utf-8", newline='') as filePointer:
-        writing = csv.DictWriter(filePointer, fieldnames=_fieldnames_)
-        writing.writeheader()
-        for i in _wishList_:
-            writing.writerow(i)
+    if book in _wishList_:
+        _wishList_.remove(book)
+        with open("user-files\wishlist.csv", "w", encoding="utf-8", newline='') as filePointer:
+            writing = csv.DictWriter(filePointer, fieldnames=_fieldnames_)
+            writing.writeheader()
+            for i in _wishList_:
+                writing.writerow(i)
     
 
 # Preprocessing all the required data

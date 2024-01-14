@@ -93,6 +93,9 @@ def bookSearch(text, SearchOn) :
         for j in answerdictionary[i][:int(100/(i+1))]:
             answerlist.append(j)
     clearFrame(search_scrollable_frame)
+    if len(answerlist) == 0:
+        sadLabel = customtkinter.CTkLabel(search_scrollable_frame, text="The book/author is not available in Gutenberg. Please click the google icon")
+        sadLabel.pack()
     for i in answerlist:
         book_print_GUI_search(i)
 
