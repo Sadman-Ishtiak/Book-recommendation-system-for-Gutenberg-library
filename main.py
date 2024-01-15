@@ -193,7 +193,7 @@ def book_print_GUI_search(book):
 # Opens a google link of the search bar 
 def google_link_opener():
     link ="https://google.com/search?q=" +  sbar.get().replace(" ", "+")
-    webbrowser.open(link)
+    webbrowser.open(link, new=0, autoraise=True)
 
 # Search frame 
 sbar = customtkinter.CTkEntry(frame_search, placeholder_text="Enter text to search", width=780)
